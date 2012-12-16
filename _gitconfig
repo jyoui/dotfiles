@@ -1,0 +1,17 @@
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1261x876+273+66
+	history-view-vpane-position = 325
+	main-window-view = HistoryView
+	file-view-vpane-position = 836
+[user]
+	name = david feng
+	email = davidxifeng@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	cm = commit -a -m
+	st = status
+	ad = add
+	last = log -l HEAD
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
