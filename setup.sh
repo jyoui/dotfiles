@@ -2,4 +2,4 @@
 #创建~/.vim/bundle目录并git clone插件管理器
 #
 #特殊处理的插件:vimproc插件需要make
-ln -s vimrc ~/.vimrc
+ln -s /home/david/david/myvimrc/vimrc ~/.vimrc
