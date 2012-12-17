@@ -122,3 +122,8 @@ map <C-H> <C-W>h
 
 " 高亮当前行
 set cursorline
+
+
+" 空格键翻页
+nmap <Space> <C-F>
+nmap <S-Space> <C-B>
