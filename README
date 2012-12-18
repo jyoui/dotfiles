@@ -1,3 +1,8 @@
+我的配置信息
+
+主要存放我的vim, zsh, lilyterm, git等软件的配置信息, 用来在电脑之间同步.
+方便新环境的搭建,践行DRY原则;-)
+
 a group of my system setup scripts, config, etc...
 
 
