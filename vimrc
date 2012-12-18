@@ -33,6 +33,10 @@ NeoBundle 'SirVer/ultisnips'
 "for reStructuredText
 NeoBundle 'Rykka/riv.vim'
 
+" 必须有的相对/绝对行号显示插件
+NeoBundle 'myusuf3/numbers.vim'
+
+
 " vim-scripts repos
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
@@ -127,3 +131,6 @@ set cursorline
 " 空格键翻页
 nmap <Space> <C-F>
 nmap <S-Space> <C-B>
+
+imap <F5> <Esc>:r! date<CR>o
+nmap <F5> <Esc>:r! date<CR>
