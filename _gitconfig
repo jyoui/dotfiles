@@ -17,3 +17,5 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [credential]
 	helper = cache --timeout=36000
+[push]
+	default = matching
