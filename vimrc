@@ -134,3 +134,6 @@ nmap <S-Space> <C-B>
 
 imap <F5> <Esc>:r! date<CR>o
 nmap <F5> <Esc>:r! date<CR>
+
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
