@@ -1,5 +1,6 @@
 # my zsh/bash alias on github
 
+alias s=stat
 alias c=clear
 alias u='cd ..'
 alias e='exit'
