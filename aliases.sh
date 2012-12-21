@@ -11,6 +11,7 @@ alias g='grep'
 alias st='stat'
 alias du='du -h'
 
+alias se='sudoedit'
 # apt
 alias ai='sudo apt-get install'
 alias as='sudo apt-cache search'

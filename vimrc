@@ -10,11 +10,20 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 "NeoBundle 'Shougo/neobundle.vim'
 
+NeoBundle 'vim-scripts/sudo.vim'
+NeoBundle 'vim-scripts/ZenCoding.vim'
+
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/echodoc'
+NeoBundle 'Shougo/vinarise'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache'
+" sudo vim问题: 1.据说这是不推荐的用法 2.设置always_set_home可以避免错误提示
+" 3. 编辑sudo使用sudo visudo, 编辑其他文件建议使用sudoedit
 
 " Note: You don't set neobundle setting in .gvimrc!
 " Original repos on github
@@ -36,6 +45,8 @@ NeoBundle 'Rykka/riv.vim'
 " 必须有的相对/绝对行号显示插件
 NeoBundle 'myusuf3/numbers.vim'
 
+"vim会话保存功能加强版
+NeoBundle 'xolox/vim-session'
 
 " vim-scripts repos
 NeoBundle 'L9'
@@ -137,3 +148,12 @@ nmap <F5> <Esc>:r! date<CR>
 
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
+" 使用插件版session
+"let g:session_autosave = 1
+"
+
+nmap <F2> :tabprevious<CR>
+nmap <F3> :tabnext<CR>
+
+" shougo写了很多vim插件啊...
+let g:vimfiler_as_default_explorer = 1
