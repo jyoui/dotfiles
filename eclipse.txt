@@ -1,0 +1,10 @@
+必备的插件update site:
+
+vim
+http://vrapper.sourceforge.net/update-site/stable
+
+haskell
+http://eclipsefp.sf.net/updates
+
+color theme
+http://eclipse-color-theme.github.com/update

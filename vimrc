@@ -12,6 +12,31 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/ZenCoding.vim'
+NeoBundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+
+NeoBundle 'vim-scripts/cscope.vim'
+NeoBundle 'vim-scripts/taglist.vim'
+
+" grep alter: ack
+NeoBundle 'mileszs/ack.vim'
+
+
+NeoBundle 'ervandew/supertab'
+
+" for c develop
+" ctags
+NeoBundle 'majutsushi/tagbar'
+
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
+" C-A C-X来修改时间日期 数字...
+NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'tpope/vim-unimpaired'
+
+"高级替换查找工具,英文写作使用的,暂时不使用...
+"NeoBundle 'tpope/vim-abolish'
+"添加/删除注释 使用: \\\ \\ \\u
+NeoBundle 'tpope/vim-commentary'
 
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile

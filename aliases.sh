@@ -17,6 +17,9 @@ alias se='sudoedit'
 alias ai='sudo apt-get install'
 alias as='sudo apt-cache search'
 
+# 常用的目录
+alias ct='cd /tmp'
+
 #
 alias va='vim ~/david/myvimrc/aliases.sh'
 alias vr='vim ~/.vimrc'
