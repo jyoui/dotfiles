@@ -20,6 +20,7 @@ alias as='sudo apt-cache search'
 # 常用的目录
 alias ct='cd /tmp'
 
+alias iconvgu='iconv -f GB18030 -t UTF-8'
 #
 alias va='vim ~/david/myvimrc/aliases.sh'
 alias vr='vim ~/.vimrc'

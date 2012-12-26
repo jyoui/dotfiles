@@ -15,11 +15,14 @@ NeoBundle 'vim-scripts/ZenCoding.vim'
 NeoBundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 
 NeoBundle 'vim-scripts/cscope.vim'
-NeoBundle 'vim-scripts/taglist.vim'
+"使用tagbar先
+"NeoBundle 'vim-scripts/taglist.vim'
 
 " grep alter: ack
 NeoBundle 'mileszs/ack.vim'
 
+" vim的语法检查
+NeoBundle 'scrooloose/syntastic'
 
 NeoBundle 'ervandew/supertab'
 
@@ -59,6 +62,7 @@ NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 NeoBundle 'dag/vim2hs'
 NeoBundle 'ujihisa/neco-ghc'
 NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'bitc/vim-hdevtools'
 "NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'pbrisbin/html-template-syntax'
 NeoBundle 'godlygeek/tabular'
