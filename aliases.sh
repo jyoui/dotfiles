@@ -12,6 +12,9 @@ alias g='grep'
 alias st='stat'
 alias du='du -h'
 
+alias pd='pushd'
+alias ppd='popd'
+
 alias se='sudoedit'
 # apt
 alias ai='sudo apt-get install'
@@ -20,7 +23,7 @@ alias as='sudo apt-cache search'
 # 常用的目录
 alias ct='cd /tmp'
 
-alias iconvgu='iconv -f GB18030 -t UTF-8'
+alias cgu='iconv -f GB18030 -t UTF-8'
 #
 alias va='vim ~/david/myvimrc/aliases.sh'
 alias vr='vim ~/.vimrc'
@@ -29,7 +32,7 @@ alias vr='vim ~/.vimrc'
 alias gvim='gvim -f'
 
 #
-alias rst2html='rst2html --no-generator -s'
+alias rst2html='rst2html --no-generator'
 
 # just for sl works, to show a cool stuff
 unalias sl

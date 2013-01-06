@@ -13,6 +13,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/ZenCoding.vim'
 NeoBundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+NeoBundle 'vim-scripts/REPL--Khorev'
 
 NeoBundle 'vim-scripts/cscope.vim'
 "使用tagbar先
@@ -45,6 +46,7 @@ NeoBundle 'tpope/vim-commentary'
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
+" install unite.vim before vim filer
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/echodoc'
 NeoBundle 'Shougo/vinarise'
@@ -61,6 +63,8 @@ NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " david's plugins for haskell
 NeoBundle 'dag/vim2hs'
 NeoBundle 'ujihisa/neco-ghc'
+
+" need cabal install ghcmod
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'bitc/vim-hdevtools'
 "NeoBundle 'kana/vim-textobj-indent'
@@ -80,6 +84,8 @@ NeoBundle 'xolox/vim-session'
 " vim-scripts repos
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
+
+NeoBundle 'VOoM'
 " Non github repos
 " removed not used scripts
 " NeoBundle 'git://git.wincent.com/command-t.git'
@@ -167,22 +173,31 @@ map <C-H> <C-W>h
 " 高亮当前行
 set cursorline
 
-
 " 空格键翻页
 nmap <Space> <C-F>
 nmap <S-Space> <C-B>
+nmap Y y$
 
-imap <F5> <Esc>:r! date<CR>o
-nmap <F5> <Esc>:r! date<CR>
+nmap zo zO
 
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
 " 使用插件版session
 "let g:session_autosave = 1
-"
 
+"F1 - F12 vim按键绑定功能分配
+"F1 不使用,保留很多地方用到的帮助功能
 nmap <F2> :tabprevious<CR>
 nmap <F3> :tabnext<CR>
+" map f4 to tabedit
 
+"F4这么好的位置就先给Riv吧,不过貌似这个可以不作为全局,之用在riv中的
+"let g:riv_global_leader="<F4>"
+
+imap <F5> <Esc>:r! date<CR>o
+nmap <F5> <Esc>:r! date<CR>
 " shougo写了很多vim插件啊...
 let g:vimfiler_as_default_explorer = 1
+
+" 使用mapleader , 默认为\
+let mapleader=","
