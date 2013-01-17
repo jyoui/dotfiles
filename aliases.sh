@@ -19,6 +19,7 @@ alias se='sudoedit'
 # apt
 alias ai='sudo apt-get install'
 alias as='sudo apt-cache search'
+alias acs='sudo apt-cache show'
 
 # 常用的目录
 alias ct='cd /tmp'

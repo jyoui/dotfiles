@@ -5,6 +5,9 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+" 使用mapleader , 默认为\
+let mapleader=","
+
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
@@ -52,6 +55,7 @@ NeoBundle 'Shougo/echodoc'
 NeoBundle 'Shougo/vinarise'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
 " sudo vim问题: 1.据说这是不推荐的用法 2.设置always_set_home可以避免错误提示
 " 3. 编辑sudo使用sudo visudo, 编辑其他文件建议使用sudoedit
 
@@ -60,17 +64,21 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'SirVer/ultisnips'
 " david's plugins for haskell
 NeoBundle 'dag/vim2hs'
 NeoBundle 'ujihisa/neco-ghc'
 
 " need cabal install ghcmod
 NeoBundle 'eagletmt/ghcmod-vim'
+" cabal install hdevtools
 NeoBundle 'bitc/vim-hdevtools'
 "NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'pbrisbin/html-template-syntax'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'SirVer/ultisnips'
+
+NeoBundle 'kien/ctrlp.vim'
 
 "for reStructuredText
 NeoBundle 'Rykka/riv.vim'
@@ -84,15 +92,8 @@ NeoBundle 'xolox/vim-session'
 " vim-scripts repos
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
-
 NeoBundle 'VOoM'
-" Non github repos
-" removed not used scripts
-" NeoBundle 'git://git.wincent.com/command-t.git'
-" Non git repos
-" temp remove
-" NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
-" NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+" end of plugins section
 
 filetype plugin indent on     " Required!
 
@@ -110,6 +111,63 @@ if neobundle#exists_not_installed_bundles()
   "finish
 endif
 
+
+
+" begin ctrlp
+"nnoremap <silent> <C-t> :CtrlP<CR>
+"nnoremap <silent> <C-r> :CtrlPMRU<CR>
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\.git$\|\.hg$\|\.svn$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$'}
+" end ctrlp
+
+" tagbar
+nnoremap <silent> <Leader>tt :TagbarToggle<CR>
+
+" 配置neo补全
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_enable_auto_delimiter = 1
+let g:neocomplcache_max_list = 15
+let g:neocomplcache_force_overwrite_completefunc = 1
+
+imap <silent><expr><Tab> neosnippet#expandable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)" :
+    \ (pumvisible() ? "\<C-e>" : "\<Tab>")
+smap <Tab> <Right><Plug>(neosnippet_expand_or_jump)
+
+" Plugin key-mappings.
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+inoremap <expr><C-g> neocomplcache#undo_completion()
+inoremap <expr><C-l> neocomplcache#complete_common_string()
+inoremap <expr><CR> neocomplcache#complete_common_string()
+
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
+
+" <CR>: close popup
+" <s-CR>: close popup and save indent.
+inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()"\<CR>" : "\<CR>"
+inoremap <expr><CR> pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y> neocomplcache#close_popup()
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+" end of neo补全配置
 
 set number
 set encoding=utf-8
@@ -171,7 +229,7 @@ map <C-H> <C-W>h
 "map <C-H> <C-W>h<C-W>_
 
 " 高亮当前行
-set cursorline
+"set cursorline
 
 " 空格键翻页
 nmap <Space> <C-F>
@@ -199,5 +257,3 @@ nmap <F5> <Esc>:r! date<CR>
 " shougo写了很多vim插件啊...
 let g:vimfiler_as_default_explorer = 1
 
-" 使用mapleader , 默认为\
-let mapleader=","
