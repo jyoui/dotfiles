@@ -23,6 +23,7 @@ alias acs='sudo apt-cache show'
 
 # 常用的目录
 alias ct='cd /tmp'
+alias cw='cd /home/david/work/space/eclipse/bin/'
 
 alias cgu='iconv -f GB18030 -t UTF-8'
 #

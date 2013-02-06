@@ -257,3 +257,4 @@ nmap <F5> <Esc>:r! date<CR>
 " shougo写了很多vim插件啊...
 let g:vimfiler_as_default_explorer = 1
 
+set guifont=Ubuntu\ Mono\ 16
