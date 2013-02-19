@@ -196,7 +196,7 @@ set expandtab " 扩展tab with合适数量的空白
 set softtabstop=4 " 处理空格的时候就像是在处理tab一样,必开的选项
 set shiftwidth=4 " 自动缩进时缩进的空格数量; with cindent, >> <<, etc.
 set shiftround
-let &showbreak='+--+ '
+let &showbreak='^'
 
 " vim提示栏的消息显示长度
 set shortmess=a " 常用的选项: 空白 a at
