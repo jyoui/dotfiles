@@ -31,6 +31,7 @@ alias vr='vim ~/.vimrc'
 alias cgu='iconv -f GB18030 -t UTF-8'
 alias rst2html='rst2html --no-generator'
 alias vc='vim CMakeLists.txt'
+alias sshl='ssh -p 1025 localhost'
 
 
 
