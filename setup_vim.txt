@@ -1,0 +1,6 @@
+vim设置安装：
+
+1. mkdir -p ~/.vim/bundle
+2. cd ~/.vim/bundle
+3. git clone git://github.com/Shougo/neobundle.vim
+4. 安装各种vim插件所需要用到的其他程序
