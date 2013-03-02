@@ -1,6 +1,10 @@
 # my zsh/bash alias on github
 # os x系统版本
 
+# mac os x命令行修正
+alias ls='ls -w'
+alias less='less -r'
+
 alias s=stat
 alias c=clear
 alias u='cd ..'
@@ -27,3 +31,6 @@ alias vr='vim ~/.vimrc'
 alias cgu='iconv -f GB18030 -t UTF-8'
 alias rst2html='rst2html --no-generator'
 alias vc='vim CMakeLists.txt'
+
+
+
