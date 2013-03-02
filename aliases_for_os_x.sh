@@ -3,7 +3,7 @@
 
 # mac os x命令行修正
 alias ls='ls -w'
-alias less='less -r'
+alias less='less -rf'
 
 alias s=stat
 alias c=clear
