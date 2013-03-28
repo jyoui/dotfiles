@@ -38,10 +38,29 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 #begin of david's custom on Mac
 
-set -o vi
-export PATH=~/Library/Haskell/bin:$PATH
 source ~/.aliases.sh
+
+set -o vi
+
+# ghci 等程序会用到的环境变量
+export EDITOR=vim
+
+export PATH=~/Library/Haskell/bin:$PATH
+export PATH=~/bin:$PATH
+
+export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=cpp
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# to fix some errors, such as ruby
+export LC_ALL=C
+export LC_CTYPE=UTF-8
+export LANG=UTF-8
+
+# 游戏服务器从环境变量中读取配置
+export POEM_SETTINGS=local_settings

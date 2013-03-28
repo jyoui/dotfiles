@@ -11,7 +11,20 @@ let mapleader=","
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
-"NeoBundle 'Shougo/neobundle.vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Recommended to install
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/unite.vim'
+" install unite.vim before vim filer
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/echodoc'
+NeoBundle 'Shougo/vinarise'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+
 
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/ZenCoding.vim'
@@ -19,8 +32,14 @@ NeoBundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 NeoBundle 'vim-scripts/REPL--Khorev'
 
 NeoBundle 'vim-scripts/cscope.vim'
+NeoBundle 'vim-scripts/vim-signature'
+NeoBundle 'vim-scripts/project.tar.gz'
+
 "使用tagbar先
 "NeoBundle 'vim-scripts/taglist.vim'
+
+NeoBundle 'DavidFeng/Conque-Shell'
+NeoBundle 'tarruda/vim-conque-repl'
 
 " grep alter: ack
 NeoBundle 'mileszs/ack.vim'
@@ -34,6 +53,7 @@ NeoBundle 'ervandew/supertab'
 " ctags
 NeoBundle 'majutsushi/tagbar'
 
+
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
 " C-A C-X来修改时间日期 数字...
@@ -44,20 +64,6 @@ NeoBundle 'tpope/vim-unimpaired'
 "NeoBundle 'tpope/vim-abolish'
 "添加/删除注释 使用: \\\ \\ \\u
 NeoBundle 'tpope/vim-commentary'
-
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/unite.vim'
-" install unite.vim before vim filer
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/echodoc'
-NeoBundle 'Shougo/vinarise'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-" sudo vim问题: 1.据说这是不推荐的用法 2.设置always_set_home可以避免错误提示
-" 3. 编辑sudo使用sudo visudo, 编辑其他文件建议使用sudoedit
 
 " Note: You don't set neobundle setting in .gvimrc!
 " Original repos on github
@@ -93,6 +99,12 @@ NeoBundle 'xolox/vim-session'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'VOoM'
+
+"
+NeoBundle 'git://git.wincent.com/command-t.git'
+NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim'
+
+
 " end of plugins section
 
 filetype plugin indent on     " Required!
@@ -104,21 +116,15 @@ filetype plugin indent on     " Required!
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
 " Installation check.
-if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' .
-        \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Please execute ":NeoBundleInstall" command.'
-  "finish
-endif
-
-
+" neo bundle更新后,原来的提醒方式也变了,可以直接按y选择安装
+NeoBundleCheck
 
 " begin ctrlp
 "nnoremap <silent> <C-t> :CtrlP<CR>
 "nnoremap <silent> <C-r> :CtrlPMRU<CR>
 let g:ctrlp_custom_ignore = {
     \ 'dir': '\.git$\|\.hg$\|\.svn$',
-    \ 'file': '\.exe$\|\.so$\|\.dll$'}
+    \ 'file': '\.exe$\|\.so$\|\.dll$\|.pyc$\|.hi$\|.o$'}
 " end ctrlp
 
 " tagbar
@@ -177,8 +183,6 @@ set tabstop=4
 map U gU
 " 开启显示不想要的空白
 set list
-"set listchars=tab:→·,trail:·,eol:<
-"set listchars=tab:>·,trail:·,eol:<
 set listchars=tab:>·,trail:·
 
 
@@ -192,7 +196,7 @@ set backspace=indent,eol,start
 " tab与空格
 set smarttab
 set tabstop=4
-set expandtab " 扩展tab with合适数量的空白
+set expandtab " 扩展tab with合适数量的空格
 set softtabstop=4 " 处理空格的时候就像是在处理tab一样,必开的选项
 set shiftwidth=4 " 自动缩进时缩进的空格数量; with cindent, >> <<, etc.
 set shiftround
@@ -211,22 +215,18 @@ highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 "match OverLength /\%81v.\+/
 
 " clipboard
-"set clipboard=unnamed " this is ms windows only option,
-set clipboard=unnamedplus " in x windows, use this. after 7.3.74
+set clipboard=unnamed " this is ms windows only option, and mac os x;
+"set clipboard=unnamedplus " in x windows, use this. after 7.3.74
 
 nnoremap j gj
 nnoremap k gk
 
 
 " 切换窗口
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-map <C-H> <C-W>h
-"map <C-J> <C-W>j<C-W>_
-"map <C-K> <C-W>k<C-W>_
-"map <C-L> <C-W>l<C-W>_
-"map <C-H> <C-W>h<C-W>_
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-L> <C-W>l
+nmap <C-H> <C-W>h
 
 " 高亮当前行
 "set cursorline
@@ -257,4 +257,15 @@ nmap <F5> <Esc>:r! date<CR>
 " shougo写了很多vim插件啊...
 let g:vimfiler_as_default_explorer = 1
 
-set guifont=Ubuntu\ Mono\ 16
+" set guifont=Ubuntu\ Mono\ 16
+set guifont=Menlo\ Regular:h15
+
+"settings for mac os x, for os x's /usr/share/vim/vimrc didn't set some
+"important options
+
+if has("syntax")
+    syntax on
+endif
+
+" fix color on popup menu highlight
+set background=dark
