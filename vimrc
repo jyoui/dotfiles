@@ -19,20 +19,58 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 " install unite.vim before vim filer
 NeoBundle 'Shougo/vimfiler'
+
+"会在echo位置显示文档
 NeoBundle 'Shougo/echodoc'
+let g:echodoc_enable_at_startup = 1
+
+"hex编辑器
 NeoBundle 'Shougo/vinarise'
+let g:vinarise_enable_auto_detect = 1
+
+"已经很有实用价值的vim shell
 NeoBundle 'Shougo/vimshell'
+
+" 补全与snippet模块
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 
+NeoBundle 'Rip-Rip/clang_complete'
+"快捷键tab的占用,暂时禁掉
+"NeoBundle 'ervandew/supertab'
 
-NeoBundle 'vim-scripts/sudo.vim'
+"可以使用 :e sudo:/etc/file来提示输入密码,编辑文件,用sudoedit,这个插件没用
+"NeoBundle 'vim-scripts/sudo.vim'
+"
 NeoBundle 'vim-scripts/ZenCoding.vim'
+let g:user_zen_expandabbr_key = '<c-v>'
+
+"强大的插件, 使用ruby与ghc交互, 在buffer中执行ghci,速度较快,不过貌似有bug
 NeoBundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+
+autocmd FileType haskell nmap <C-c><C-l> :GhciRange<CR>
+autocmd FileType haskell vmap <C-c><C-l> :GhciRange<CR>
+autocmd FileType haskell nmap <C-c><C-f> :GhciFile<CR>
+autocmd FileType haskell nmap <C-c><C-r> :GhciReload<CR>
+
+
+"速度还是太慢!要是不慢就可以实用了
+"支持多种repl, python ghci bash, 可以在buffer中出现repl,但目前还无可用性
 NeoBundle 'vim-scripts/REPL--Khorev'
 
+NeoBundle 'vim-scripts/VimClojure'
+
+
 NeoBundle 'vim-scripts/cscope.vim'
+
+"python的一些增强
+NeoBundle 'vim-scripts/python.vim'
+"NeoBundle 'gg/python.vim' "bundle插件限制,还不能处理同名repo插件
+
+"vim显示mark插件
 NeoBundle 'vim-scripts/vim-signature'
+"略有点不好的4秒刷新一次显示的设计
+"NeoBundle 'zakj/vim-showmarks'
 NeoBundle 'vim-scripts/project.tar.gz'
 
 "使用tagbar先
@@ -45,14 +83,14 @@ NeoBundle 'tarruda/vim-conque-repl'
 NeoBundle 'mileszs/ack.vim'
 
 " vim的语法检查
-NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'scrooloose/syntastic'
 
-NeoBundle 'ervandew/supertab'
 
 " for c develop
 " ctags
 NeoBundle 'majutsushi/tagbar'
-
+" tagbar
+nnoremap <silent> <Leader>tt :TagbarToggle<CR>
 
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
@@ -67,12 +105,30 @@ NeoBundle 'tpope/vim-commentary'
 
 " Note: You don't set neobundle setting in .gvimrc!
 " Original repos on github
+
+
+
+" git 的vim包装 Gbrowser Gmove Gremove Gblame Gcommit等操作
 NeoBundle 'tpope/vim-fugitive'
+
 NeoBundle 'Lokaltog/vim-easymotion'
+
+" 和zen coding类似的插件
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" 这两个键默认imap和nmap下都没有被绑定
+"let g:sparkupExecuteMapping = '<c-d>'
+"let g:sparkupNextMapping ='<c-f>'
 
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'SirVer/ultisnips'
+" c-t后输入分隔符如, = 然后回车. 不知道还有没有更方便的方法
+noremap <c-c> :Tabularize /
+
+" c-c Tabularize对齐 c-d c-f: sparkup的绑定 c-v zen coding的
+" c-e 系列 rst的绑定
+" c-p 文件模糊查找的绑定
+
+"与neo补全系列的tab enter等快捷键冲突,暂时禁用
+"NeoBundle 'SirVer/ultisnips'
 " david's plugins for haskell
 NeoBundle 'dag/vim2hs'
 NeoBundle 'ujihisa/neco-ghc'
@@ -85,15 +141,21 @@ NeoBundle 'bitc/vim-hdevtools'
 NeoBundle 'pbrisbin/html-template-syntax'
 
 NeoBundle 'kien/ctrlp.vim'
+let g:ctrlp_use_caching=1
 
-"for reStructuredText
+" for reStructuredText
 NeoBundle 'Rykka/riv.vim'
 
 " 必须有的相对/绝对行号显示插件
 NeoBundle 'myusuf3/numbers.vim'
 
-"vim会话保存功能加强版
+" vim会话保存功能加强版
 NeoBundle 'xolox/vim-session'
+
+
+" 自动补全括号的插件
+NeoBundle 'Raimondi/delimitMate'
+
 
 " vim-scripts repos
 NeoBundle 'L9'
@@ -119,6 +181,111 @@ filetype plugin indent on     " Required!
 " neo bundle更新后,原来的提醒方式也变了,可以直接按y选择安装
 NeoBundleCheck
 
+" python的#缩进设置
+"autocmd FileType python inoremap # X<c-h>#<space>
+autocmd FileType python inoremap # X<c-h>#
+
+" begin of 补全与snippet模块
+" Disable AutoComplPop. Comment out this line if AutoComplPop is not installed.
+let g:acp_enableAtStartup = 0 " 禁掉冲突的插件
+" Launches neocomplcache automatically on vim startup.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Use camel case completion.
+let g:neocomplcache_enable_camel_case_completion = 1
+" Use underscore completion.
+let g:neocomplcache_enable_underbar_completion = 1
+" Sets minimum char length of syntax keyword.
+let g:neocomplcache_min_syntax_length = 3
+" buffer file name pattern that locks neocomplcache. e.g. ku.vim or fuzzyfinder
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" Define file-type dependent dictionaries.
+let g:neocomplcache_dictionary_filetype_lists = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+    \ }
+
+" Define keyword, for minor languages
+if !exists('g:neocomplcache_keyword_patterns')
+  let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+" <TAB>: completion.
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
+" AutoComplPop like behavior.
+"let g:neocomplcache_enable_auto_select = 1
+
+" Shell like behavior(not recommended).
+"set completeopt+=longest
+"let g:neocomplcache_enable_auto_select = 1
+"let g:neocomplcache_disable_auto_complete = 1
+"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
+"inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+
+" Enable omni completion. Not required if they are already set elsewhere in .vimrc
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion, which require computational power and may stall the vim.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+"暂时不使用ruby的补全
+"let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+"let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+
+" neo snippet的选项
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" SuperTab like snippets behavior.
+" neo补全默认启用一个非常普通的tab,那个不好;然后禁用的supertab like的tab也不如
+" 这个tab给力
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+
+" endof 补全和snippet设置
+
+"clang complete设置
+"let g:clang_complete_auto = 1 " 不好用
+
+
 " begin ctrlp
 "nnoremap <silent> <C-t> :CtrlP<CR>
 "nnoremap <silent> <C-r> :CtrlPMRU<CR>
@@ -126,54 +293,6 @@ let g:ctrlp_custom_ignore = {
     \ 'dir': '\.git$\|\.hg$\|\.svn$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|.pyc$\|.hi$\|.o$'}
 " end ctrlp
-
-" tagbar
-nnoremap <silent> <Leader>tt :TagbarToggle<CR>
-
-" 配置neo补全
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_enable_auto_delimiter = 1
-let g:neocomplcache_max_list = 15
-let g:neocomplcache_force_overwrite_completefunc = 1
-
-imap <silent><expr><Tab> neosnippet#expandable() ?
-    \ "\<Plug>(neosnippet_expand_or_jump)" :
-    \ (pumvisible() ? "\<C-e>" : "\<Tab>")
-smap <Tab> <Right><Plug>(neosnippet_expand_or_jump)
-
-" Plugin key-mappings.
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-inoremap <expr><C-g> neocomplcache#undo_completion()
-inoremap <expr><C-l> neocomplcache#complete_common_string()
-inoremap <expr><CR> neocomplcache#complete_common_string()
-
-" <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-
-" <CR>: close popup
-" <s-CR>: close popup and save indent.
-inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()"\<CR>" : "\<CR>"
-inoremap <expr><CR> pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplcache#close_popup()
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-
-" end of neo补全配置
 
 set number
 set encoding=utf-8
@@ -188,9 +307,7 @@ set listchars=tab:>·,trail:·
 
 set ignorecase
 set smartcase
-
 set smartindent
-
 set backspace=indent,eol,start
 
 " tab与空格
@@ -269,3 +386,10 @@ endif
 
 " fix color on popup menu highlight
 set background=dark
+
+" 高亮搜索内容
+"set hlsearch
+
+" vim常用命令备忘:
+" 删除所有的行末尾的空白
+" %s /\s\+$// 或者省略掉替换对象: %s /\s\+$

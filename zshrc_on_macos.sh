@@ -38,11 +38,15 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 #begin of david's custom on Mac
 
+#设置clojure script的环境变量
+export CLOJURESCRIPT_HOME=/Users/david/github/clojurescript
+
 source ~/.aliases.sh
+source ~/.zsh_fix_dyld_warning.sh
 
 set -o vi
 
@@ -52,15 +56,27 @@ export EDITOR=vim
 export PATH=~/Library/Haskell/bin:$PATH
 export PATH=~/bin:$PATH
 
-export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=cpp
+export PATH=$CLOJURESCRIPT_HOME/bin:$PATH
 
+#export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=cpp
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # to fix some errors, such as ruby
+# ls -d /usr/share/locale/*.UTF-8
 export LC_ALL=C
-export LC_CTYPE=UTF-8
-export LANG=UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # 游戏服务器从环境变量中读取配置
 export POEM_SETTINGS=local_settings
+
+# 云悦开发使用
+PATH=~/poem/program/protocol:$PATH
+#PATH=~/poem/program/cocos2dx/lua:$PATH
+
+
+# 据说可以解决非常讨厌的zsh git命令补全太慢的问题
+__git_files () { 
+    _wanted files expl 'local files' _files     
+}
