@@ -31,6 +31,7 @@ let g:vinarise_enable_auto_detect = 1
 "已经很有实用价值的vim shell
 NeoBundle 'Shougo/vimshell'
 
+
 " 补全与snippet模块
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -43,7 +44,7 @@ NeoBundle 'Rip-Rip/clang_complete'
 "NeoBundle 'vim-scripts/sudo.vim'
 "
 NeoBundle 'vim-scripts/ZenCoding.vim'
-let g:user_zen_expandabbr_key = '<c-v>'
+"let g:user_zen_expandabbr_key = '<c-v>'
 
 "强大的插件, 使用ruby与ghc交互, 在buffer中执行ghci,速度较快,不过貌似有bug
 NeoBundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
@@ -76,8 +77,8 @@ NeoBundle 'vim-scripts/project.tar.gz'
 "使用tagbar先
 "NeoBundle 'vim-scripts/taglist.vim'
 
-NeoBundle 'DavidFeng/Conque-Shell'
-NeoBundle 'tarruda/vim-conque-repl'
+"NeoBundle 'DavidFeng/Conque-Shell'
+"NeoBundle 'tarruda/vim-conque-repl'
 
 " grep alter: ack
 NeoBundle 'mileszs/ack.vim'
@@ -85,6 +86,8 @@ NeoBundle 'mileszs/ack.vim'
 " vim的语法检查
 "NeoBundle 'scrooloose/syntastic'
 
+" protobuf vim语法插件
+NeoBundle 'uarun/vim-protobuf'
 
 " for c develop
 " ctags
@@ -150,6 +153,7 @@ NeoBundle 'Rykka/riv.vim'
 NeoBundle 'myusuf3/numbers.vim'
 
 " vim会话保存功能加强版
+NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
 
 
@@ -366,9 +370,6 @@ nmap <F2> :tabprevious<CR>
 nmap <F3> :tabnext<CR>
 " map f4 to tabedit
 
-"F4这么好的位置就先给Riv吧,不过貌似这个可以不作为全局,之用在riv中的
-"let g:riv_global_leader="<F4>"
-
 imap <F5> <Esc>:r! date<CR>o
 nmap <F5> <Esc>:r! date<CR>
 " shougo写了很多vim插件啊...
@@ -389,6 +390,8 @@ set background=dark
 
 " 高亮搜索内容
 "set hlsearch
+
+au BufNewFile,BufRead Tupfile,*.tup setf tup
 
 " vim常用命令备忘:
 " 删除所有的行末尾的空白
