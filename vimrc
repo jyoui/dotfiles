@@ -132,14 +132,21 @@ noremap <c-c> :Tabularize /
 
 "与neo补全系列的tab enter等快捷键冲突,暂时禁用
 "NeoBundle 'SirVer/ultisnips'
+
+
 " david's plugins for haskell
+
+" 暂时解决折叠deriving中的代码的有bug的插件
 NeoBundle 'dag/vim2hs'
+
+" 各种haskell的补全 cabal install ghcmod
 NeoBundle 'ujihisa/neco-ghc'
 
-" need cabal install ghcmod
 NeoBundle 'eagletmt/ghcmod-vim'
-" cabal install hdevtools
-NeoBundle 'bitc/vim-hdevtools'
+NeoBundle 'bitc/vim-hdevtools' " cabal install hdevtools
+
+
+
 "NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'pbrisbin/html-template-syntax'
 
@@ -149,7 +156,8 @@ let g:ctrlp_use_caching=1
 " for reStructuredText
 NeoBundle 'Rykka/riv.vim'
 
-" 必须有的相对/绝对行号显示插件
+" 相对/绝对行号显示插件 有时会导致vim不够流畅, 可能是底层的实现不够高效
+" 心情:多希望能够有更优雅更高效的yi,而且自己也参与到开发中
 NeoBundle 'myusuf3/numbers.vim'
 
 " vim会话保存功能加强版
@@ -165,6 +173,10 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'VOoM'
+
+" vim的多重选择插件
+NeoBundle 'terryma/vim-multiple-cursors'
+
 
 "
 NeoBundle 'git://git.wincent.com/command-t.git'
@@ -298,7 +310,6 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.exe$\|\.so$\|\.dll$\|.pyc$\|.hi$\|.o$'}
 " end ctrlp
 
-set number
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set tabstop=4
@@ -370,8 +381,9 @@ nmap <F2> :tabprevious<CR>
 nmap <F3> :tabnext<CR>
 " map f4 to tabedit
 
-imap <F5> <Esc>:r! date<CR>o
-nmap <F5> <Esc>:r! date<CR>
+nnoremap <F5> "=strftime("%a %H:%M %b %d")<CR>P
+inoremap <F5> <C-R>=strftime("%a %H:%M %b %d")<CR>
+
 " shougo写了很多vim插件啊...
 let g:vimfiler_as_default_explorer = 1
 
@@ -393,6 +405,11 @@ set background=dark
 
 au BufNewFile,BufRead Tupfile,*.tup setf tup
 
+" vim升级到7.4之后, hs文件版的插入模式下number选项就是0了,很奇怪
+" 在这里重新设置后可以暂时解决这个问题
+set number
+
 " vim常用命令备忘:
 " 删除所有的行末尾的空白
 " %s /\s\+$// 或者省略掉替换对象: %s /\s\+$
+let g:session_autosave = 'yes'

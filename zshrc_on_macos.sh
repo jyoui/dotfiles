@@ -46,7 +46,9 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export CLOJURESCRIPT_HOME=/Users/david/github/clojurescript
 
 source ~/.aliases.sh
-source ~/.zsh_fix_dyld_warning.sh
+
+# 都忘了这个是什么时候设置的了,为解决什么问题的了,如今brew doctor又warning这个
+#source ~/.zsh_fix_dyld_warning.sh
 
 set -o vi
 
@@ -58,25 +60,14 @@ export PATH=~/bin:$PATH
 
 export PATH=$CLOJURESCRIPT_HOME/bin:$PATH
 
-#export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=cpp
+#非常令人奇怪的是,在10.9系统中,设置这个环境变量会导致在终端中输入的中文会以
+#转义的utf8原始编码显示,之前的系统就不会
+#export LC_ALL=C
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# to fix some errors, such as ruby
-# ls -d /usr/share/locale/*.UTF-8
-export LC_ALL=C
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# 游戏服务器从环境变量中读取配置
-export POEM_SETTINGS=local_settings
-
-# 云悦开发使用
-PATH=~/poem/program/protocol:$PATH
-#PATH=~/poem/program/cocos2dx/lua:$PATH
-
-
 # 据说可以解决非常讨厌的zsh git命令补全太慢的问题
-__git_files () { 
-    _wanted files expl 'local files' _files     
+__git_files () {
+    _wanted files expl 'local files' _files
 }
