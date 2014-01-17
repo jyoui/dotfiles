@@ -28,12 +28,12 @@ alias sudoedit='sudo -e'
 
 # 常用的目录
 alias ct='cd /tmp'
-alias cdl='cd ~/david/log'
-alias cw='cd ~/pl/team/'
-alias cws='cd ~/pl/team/server/src'
-alias cwc='cd ~/pl/team/client/resources'
-alias cwp='cd ~/pl/team/proto'
-alias cww='cd ~/pl/team/wiki'
+alias cdl='cd ~/david/log/diary-2014'
+alias cw='cd ~/work'
+alias cws='cd ~/work/server/src'
+alias cwc='cd ~/work/client/resources'
+alias cwp='cd ~/work/proto'
+alias cww='cd ~/work/wiki'
 
 # 常修改编辑的文件
 alias va='vim ~/david/myvimrc/aliases_for_os_x.sh'
@@ -43,6 +43,8 @@ alias vr='vim ~/.vimrc'
 alias cgu='iconv -f GB18030 -t UTF-8'
 #alias rst2html='rst2html --no-generator'
 alias sshw='ssh david@223.4.32.165'
+alias sshvm0='ssh david@192.157.241.76'
+
 alias py=python
 alias bpy=bpython
 alias pym='python -m'

@@ -26,7 +26,7 @@ let g:echodoc_enable_at_startup = 1
 
 "hex编辑器
 NeoBundle 'Shougo/vinarise'
-let g:vinarise_enable_auto_detect = 1
+let g:vinarise_enable_auto_detect = 0
 
 "已经很有实用价值的vim shell
 NeoBundle 'Shougo/vimshell'
@@ -35,6 +35,8 @@ NeoBundle 'Shougo/vimshell'
 " 补全与snippet模块
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+
+let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
 NeoBundle 'Rip-Rip/clang_complete'
 "快捷键tab的占用,暂时禁掉
@@ -136,8 +138,12 @@ noremap <c-c> :Tabularize /
 
 " david's plugins for haskell
 
-" 暂时解决折叠deriving中的代码的有bug的插件
+"let g:haskell_conceal_wide = 1
+let g:haskell_conceal_enumerations = 0 " 标准的解决方法
 NeoBundle 'dag/vim2hs'
+
+"这个插件有问题,还不能正常使用
+"NeoBundle 'kana/vim-textobj-indent'
 
 " 各种haskell的补全 cabal install ghcmod
 NeoBundle 'ujihisa/neco-ghc'
