@@ -42,13 +42,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 #begin of david's custom on Mac
 
-#设置clojure script的环境变量
-export CLOJURESCRIPT_HOME=/Users/david/github/clojurescript
-
 source ~/.aliases.sh
-
-# 都忘了这个是什么时候设置的了,为解决什么问题的了,如今brew doctor又warning这个
-#source ~/.zsh_fix_dyld_warning.sh
 
 set -o vi
 
@@ -60,14 +54,18 @@ export PATH=~/bin:$PATH
 
 export PATH=$CLOJURESCRIPT_HOME/bin:$PATH
 
-#非常令人奇怪的是,在10.9系统中,设置这个环境变量会导致在终端中输入的中文会以
-#转义的utf8原始编码显示,之前的系统就不会
-#export LC_ALL=C
+# adb
+export PATH=~/software/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH
+# ndk-build
+export PATH=~/software/android-ndk-r9c:$PATH
 
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# 据说可以解决非常讨厌的zsh git命令补全太慢的问题
 __git_files () {
     _wanted files expl 'local files' _files
 }
+
+export ANDROID_SDK_ROOT="/Users/david/software/adt-bundle-mac-x86_64-20131030/sdk"
+export NDK_ROOT="/Users/david/software/android-ndk-r9c"
+export NDK_MODULE_PATH="/Users/david/work/client/libs:/Users/david/work/client/libs/cocos2dx/platform/third_party/android/prebuilt"

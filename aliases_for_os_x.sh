@@ -48,3 +48,4 @@ alias sshvm0='ssh david@192.157.241.76'
 alias py=python
 alias bpy=bpython
 alias pym='python -m'
+alias hp='hprotoc -d ../server/World/src '

@@ -19,7 +19,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 " install unite.vim before vim filer
 NeoBundle 'Shougo/vimfiler'
-
+NeoBundle 'plasticboy/vim-markdown'
 "会在echo位置显示文档
 NeoBundle 'Shougo/echodoc'
 let g:echodoc_enable_at_startup = 1
