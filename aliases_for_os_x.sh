@@ -30,8 +30,8 @@ alias sudoedit='sudo -e'
 alias ct='cd /tmp'
 alias cdl='cd ~/david/log/diary-2014'
 alias cw='cd ~/work'
-alias cws='cd ~/work/server/src'
-alias cwc='cd ~/work/client/resources'
+alias cws='cd ~/work/server/World/src'
+alias cwc='cd ~/work/client'
 alias cwp='cd ~/work/proto'
 alias cww='cd ~/work/wiki'
 
@@ -41,9 +41,7 @@ alias vr='vim ~/.vimrc'
 
 #常用的工具，命令
 alias cgu='iconv -f GB18030 -t UTF-8'
-#alias rst2html='rst2html --no-generator'
 alias sshw='ssh david@223.4.32.165'
-alias sshvm0='ssh david@192.157.241.76'
 
 alias py=python
 alias bpy=bpython
