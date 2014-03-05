@@ -91,6 +91,8 @@ NeoBundle 'mileszs/ack.vim'
 " protobuf vim语法插件
 NeoBundle 'uarun/vim-protobuf'
 
+NeoBundle 'leafo/moonscript-vim'
+
 " for c develop
 " ctags
 NeoBundle 'majutsushi/tagbar'
@@ -419,3 +421,14 @@ set number
 " 删除所有的行末尾的空白
 " %s /\s\+$// 或者省略掉替换对象: %s /\s\+$
 let g:session_autosave = 'yes'
+
+let maplocalleader = "\\"
+
+" 命令行高度 echodoc插件要求>2的值
+set cmdheight=3
+
+" 很有必要的功能,vi兼容的历史原因,默认没有开启
+set scrolloff=5
+
+
+
