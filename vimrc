@@ -347,7 +347,6 @@ set shortmess=a " 常用的选项: 空白 a at
 
 " 空白线
 set textwidth=80
-"set colorcolumn=81 "or set it directly
 set colorcolumn=81
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 " 另外还有一种高亮超过参考线的方法
