@@ -34,6 +34,7 @@ alias cws='cd ~/work/server/World/src'
 alias cwc='cd ~/work/client'
 alias cwp='cd ~/work/proto'
 alias cww='cd ~/work/wiki'
+alias cdc='cd ~/david/lovely_codes/haskell/snippet'
 
 # 常修改编辑的文件
 alias va='vim ~/david/myvimrc/aliases_for_os_x.sh'
