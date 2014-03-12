@@ -185,11 +185,13 @@ NeoBundle 'VOoM'
 " vim的多重选择插件
 NeoBundle 'terryma/vim-multiple-cursors'
 
+NeoBundle 'altercation/vim-colors-solarized'
 
-"
 NeoBundle 'git://git.wincent.com/command-t.git'
 NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim'
 
+set background=light
+colorscheme solarized
 
 " end of plugins section
 

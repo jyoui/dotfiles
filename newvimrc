@@ -73,6 +73,7 @@
     elseif has ('gui')          " On mac and Windows, use * register for copy-paste
         set clipboard=unnamed
     endif
+    set clipboard=unnamed
 
     " Most prefer to automatically switch to the current file directory when
     " a new buffer is opened; to prevent this behavior, add the following to
@@ -246,10 +247,10 @@
     " .vimrc.before.local file:
     "   let g:spf13_no_easyWindows = 1
     if !exists('g:spf13_no_easyWindows')
-        map <C-J> <C-W>j<C-W>_
-        map <C-K> <C-W>k<C-W>_
-        map <C-L> <C-W>l<C-W>_
-        map <C-H> <C-W>h<C-W>_
+        map <C-J> <C-W>j
+        map <C-K> <C-W>k
+        map <C-L> <C-W>l
+        map <C-H> <C-W>h
     endif
 
     " Wrapped lines goes down/up to next row, rather than next line in file.
@@ -452,6 +453,7 @@
         vmap <Leader>a,, :Tabularize /,\zs<CR>
         nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
         vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+        nmap <c-c> :Tabularize /
     " }
 
     " Session List {
@@ -950,3 +952,6 @@ inoremap <F5> <C-R>=strftime("%a %H:%M %b %d")<CR>
 set textwidth=80
 set colorcolumn=81
 highlight ColorColumn ctermbg=red guibg=blue
+
+set scrolloff=5
+let g:necoghc_enable_detailed_browse = 1
