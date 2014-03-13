@@ -217,7 +217,8 @@
     autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
     autocmd FileType go autocmd BufWritePre <buffer> Fmt
     autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
-    autocmd FileType haskell setlocal expandtab shiftwidth=2 softtabstop=2
+    " david note: Haskell中,是使用2个空格缩进还是使用4个空格,还需要再仔细考虑
+    autocmd FileType haskell setlocal expandtab shiftwidth=4 softtabstop=4
     " preceding line best in a plugin but here for now.
 
     autocmd BufNewFile,BufRead *.coffee set filetype=coffee
@@ -378,8 +379,9 @@
         hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
 
         " Some convenient mappings
-        inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-        inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+        "inoremap <expr> <Esc>      pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
+        "inoremap <expr> <CR>       pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
+        inoremap <expr><CR>        neocomplcache#smart_close_popup() . "\<CR>"
         inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
         inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
         inoremap <expr> <C-d>      pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
@@ -963,4 +965,13 @@ nmap <c-w>kk <c-w>k<c-w>_
 " Easier moving in tabs and windows
 map <C-J> <C-W>j
 map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+
+set smarttab
+set tabstop=4
+set expandtab " 扩展tab with合适数量的空格
+set softtabstop=4 " 处理空格的时候就像是在处理tab一样,必开的选项
+set shiftwidth=4 " 自动缩进时缩进的空格数量; with cindent, >> <<, etc.
+set shiftround
 
