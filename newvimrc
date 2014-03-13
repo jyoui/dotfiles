@@ -241,19 +241,8 @@
         let mapleader=g:spf13_leader
     endif
 
-    " Easier moving in tabs and windows
-    " The lines conflict with the default digraph mapping of <C-K>
-    " If you prefer that functionality, add the following to your
-    " .vimrc.before.local file:
-    "   let g:spf13_no_easyWindows = 1
-    if !exists('g:spf13_no_easyWindows')
-        map <C-J> <C-W>j
-        map <C-K> <C-W>k
-        map <C-L> <C-W>l
-        map <C-H> <C-W>h
-    endif
 
-    " Wrapped lines goes down/up to next row, rather than next line in file.
+" Wrapped lines goes down/up to next row, rather than next line in file.
     noremap j gj
     noremap k gk
 
@@ -955,3 +944,23 @@ highlight ColorColumn ctermbg=red guibg=blue
 
 set scrolloff=5
 let g:necoghc_enable_detailed_browse = 1
+
+let &showbreak='^'
+set list
+set listchars=tab:>·,trail:·
+
+let NERDTreeIgnore = ['\.pyc$', '\.hi$', '\.o$', '\.jpg$', '\.png$']
+nmap U gU
+
+
+"must have config for vim2hs
+let g:haskell_conceal_enumerations = 0
+
+" 不改变窗口大小的移动 <c-j> <c-k>
+nmap <c-w>jj <c-w>j<c-w>_
+nmap <c-w>kk <c-w>k<c-w>_
+
+" Easier moving in tabs and windows
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+
