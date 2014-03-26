@@ -49,9 +49,8 @@ set -o vi
 # ghci 等程序会用到的环境变量
 export EDITOR=vim
 
-export PATH=~/Library/Haskell/bin:$PATH
 export PATH=~/bin:$PATH
-
+export PATH=~/Library/Haskell/bin:$PATH
 export PATH=$CLOJURESCRIPT_HOME/bin:$PATH
 
 # adb

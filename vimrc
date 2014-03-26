@@ -15,6 +15,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'tomtom/tlib_vim'
+
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 " install unite.vim before vim filer
@@ -33,12 +35,24 @@ NeoBundle 'Shougo/vimshell'
 
 
 " 补全与snippet模块
-NeoBundle 'Shougo/neocomplcache'
+"NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'honza/vim-snippets'
+
+NeoBundle 'travitch/hasksyn'
+let g:haskell_conceal_enumerations = 0 " 标准的解决方法
+NeoBundle 'dag/vim2hs'
+NeoBundle 'Twinside/vim-haskellConceal'
+NeoBundle 'lukerandall/haskellmode-vim'
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'eagletmt/ghcmod-vim'
+"NeoBundle 'adinapoli/cumino'
+"NeoBundle 'bitc/vim-hdevtools' " cabal install hdevtools
 
 let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
-NeoBundle 'Rip-Rip/clang_complete'
+"NeoBundle 'Rip-Rip/clang_complete'
 "快捷键tab的占用,暂时禁掉
 "NeoBundle 'ervandew/supertab'
 
@@ -86,7 +100,7 @@ NeoBundle 'vim-scripts/project.tar.gz'
 NeoBundle 'mileszs/ack.vim'
 
 " vim的语法检查
-"NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 
 " protobuf vim语法插件
 NeoBundle 'uarun/vim-protobuf'
@@ -140,19 +154,9 @@ noremap <c-c> :Tabularize /
 
 " david's plugins for haskell
 
-"let g:haskell_conceal_wide = 1
-let g:haskell_conceal_enumerations = 0 " 标准的解决方法
-NeoBundle 'dag/vim2hs'
 
 "这个插件有问题,还不能正常使用
 "NeoBundle 'kana/vim-textobj-indent'
-
-" 各种haskell的补全 cabal install ghcmod
-NeoBundle 'ujihisa/neco-ghc'
-
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'bitc/vim-hdevtools' " cabal install hdevtools
-
 
 
 "NeoBundle 'kana/vim-textobj-indent'
@@ -430,4 +434,11 @@ set cmdheight=3
 set scrolloff=5
 
 
+let g:haddock_browser="open"
+let g:haddock_docdir="/Users/david/Library/Haskell/doc"
 
+
+" spf13中好用的quickfix窗口的调出
+if !executable("ghcmod")
+    autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+endif
