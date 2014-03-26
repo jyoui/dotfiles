@@ -940,3 +940,5 @@ set shiftwidth=4 " 自动缩进时缩进的空格数量; with cindent, >> <<, et
 set shiftround
 set wrap
 
+" 设置使用的插件组
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'haskell', 'misc']
