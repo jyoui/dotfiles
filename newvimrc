@@ -942,3 +942,14 @@ set wrap
 
 " 设置使用的插件组
 let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'haskell', 'misc']
+
+function! Incr()
+  let a = line('.') - line("'<")
+  let c = virtcol("'<")
+  if a > 0
+    execute 'normal! '.c.'|'.a."\<C-a>"
+  endif
+  normal `<
+endfunction
+vnoremap <C-a> :call Incr()<CR>
+

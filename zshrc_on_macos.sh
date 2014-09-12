@@ -37,6 +37,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+#alias zsh_history=perl -lne 'm#: (\d+):\d+;(.+)# && printf "%s :: %s\n",scalar localtime $1,$2' $HISTFILE
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
@@ -68,3 +70,15 @@ __git_files () {
 export ANDROID_SDK_ROOT="/Users/david/software/adt-bundle-mac-x86_64-20131030/sdk"
 export NDK_ROOT="/Users/david/software/android-ndk-r9c"
 export NDK_MODULE_PATH="/Users/david/work/client/libs:/Users/david/work/client/libs/cocos2dx/platform/third_party/android/prebuilt"
+export NODE_PATH="/usr/local/lib/node_modules"
+#export NODE_PATH="/Users/david/software/node_modules"
+
+# oracle java 1.7
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
+
+# 需要使用ghc的 -fllvm时启用
+#export PATH=/opt/llvm/bin:$PATH
+
+export JIRA_HOME=~/software/atlassian-jira-6.3-home
+
