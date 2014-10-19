@@ -909,6 +909,7 @@ set colorcolumn=81
 highlight ColorColumn ctermbg=red guibg=blue
 
 set scrolloff=5
+set scrolljump=1                " Lines to scroll when cursor leaves screen
 let g:necoghc_enable_detailed_browse = 1
 
 let &showbreak='^'
@@ -953,3 +954,5 @@ function! Incr()
 endfunction
 vnoremap <C-a> :call Incr()<CR>
 
+" ctrlp_working_path_mode
+let g:ctrlp_root_markers=['.myctrlproot']
