@@ -53,12 +53,13 @@ export EDITOR=vim
 
 export PATH=~/bin:$PATH
 export PATH=~/Library/Haskell/bin:$PATH
-export PATH=$CLOJURESCRIPT_HOME/bin:$PATH
+#export PATH=$CLOJURESCRIPT_HOME/bin:$PATH
 
 # adb
 export PATH=~/software/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH
 # ndk-build
 export PATH=~/software/android-ndk-r9c:$PATH
+export PATH=/usr/local/openresty/nginx/sbin:$PATH
 
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -75,7 +76,6 @@ export NODE_PATH="/usr/local/lib/node_modules"
 
 # oracle java 1.7
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
-
 
 # 需要使用ghc的 -fllvm时启用
 #export PATH=/opt/llvm/bin:$PATH
