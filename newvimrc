@@ -956,3 +956,6 @@ vnoremap <C-a> :call Incr()<CR>
 
 " ctrlp_working_path_mode
 let g:ctrlp_root_markers=['.myctrlproot']
+
+" set to no or delete ~/.vim/sessions/default.vim
+let g:session_autoload = 'no'
