@@ -5,7 +5,7 @@
 	main-window-view            = HistoryView
 	file-view-vpane-position    = 836
 [user]
-	name       = david feng
+	name       = David Feng
 	email      = davidxifeng@gmail.com
 	signingkey = EC634FD9
 [color]
