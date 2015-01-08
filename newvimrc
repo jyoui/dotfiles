@@ -73,6 +73,7 @@
     elseif has ('gui')          " On mac and Windows, use * register for copy-paste
         set clipboard=unnamed
     endif
+    "set clipboard=unnamedplus
     set clipboard=unnamed
 
     " Most prefer to automatically switch to the current file directory when
@@ -100,6 +101,7 @@
     " Restore cursor to file position in previous editing session
     " To disable this, add the following to your .vimrc.before.local file:
     "   let g:spf13_no_restore_cursor = 1
+    let g:spf13_no_restore_cursor = 1
     if !exists('g:spf13_no_restore_cursor')
         function! ResCur()
             if line("'\"") <= line("$")
