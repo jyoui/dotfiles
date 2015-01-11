@@ -49,8 +49,6 @@ export PATH=/usr/local/openresty/nginx/sbin:$PATH
 __git_files () {
     _wanted files expl 'local files' _files
 }
-
-
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # oracle java 1.7
@@ -62,7 +60,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 # cocos2dx android develop
 export ANDROID_SDK_ROOT="/Users/david/software/android-sdk-macosx/"
 export NDK_ROOT="/Users/david/software/android-ndk-r9d/"
-export COCOS_CONSOLE_ROOT=/Users/david/ShortTail/dagger/external/cocos2d-js/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=/Users/david/work/cocos2d-x-3.3/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export ANT_ROOT=/usr/local/bin # for cocos console
 
