@@ -32,8 +32,7 @@ alias sudoedit='sudo -e'
 alias ct='cd /tmp'
 alias cdl='cd ~/david/log'
 
-alias cw='cd ~/ShortTail'
-alias cws='cd ~/ShortTail/dagger/Resources/src/'
+alias cw='cd ~/work/flee2/Developer/trunk/FleeFlee2/src/'
 
 # 常修改编辑的文件
 alias va='vim ~/david/myvimrc/aliases_for_os_x.sh'
