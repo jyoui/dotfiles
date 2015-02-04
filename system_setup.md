@@ -14,3 +14,9 @@
 defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
 ```
 
+sublime 的命令行
+
+``` sh
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+```
+
