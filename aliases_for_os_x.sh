@@ -32,7 +32,7 @@ alias sudoedit='sudo -e'
 alias ct='cd /tmp'
 alias cdl='cd ~/david/log'
 
-alias cw='cd ~/work/flee2/Developer/trunk/FleeFlee2/src/'
+alias cw='cd ~/work'
 
 # 常修改编辑的文件
 alias va='vim ~/david/myvimrc/aliases_for_os_x.sh'
@@ -41,6 +41,3 @@ alias vr='vim ~/.vimrc'
 alias py=python
 alias bpy=bpython
 alias pym='python -m'
-
-#Lua
-alias cl='cd ~/Lua/lua-5.1.5/src/'

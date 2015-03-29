@@ -35,7 +35,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 #begin of david's custom on Mac
 
-source ~/.aliases.sh
+source ~/david/myvimrc/aliases_for_os_x.sh
 
 set -o vi
 
@@ -51,8 +51,8 @@ __git_files () {
 }
 export NODE_PATH="/usr/local/lib/node_modules"
 
-# oracle java 1.7
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+# oracle java 1.8
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # 需要使用ghc的 -fllvm时启用
 #export PATH=/opt/llvm/bin:$PATH

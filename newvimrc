@@ -195,8 +195,6 @@
     set scrolljump=5                " Lines to scroll when cursor leaves screen
     set scrolloff=3                 " Minimum lines to keep above and below cursor
     set foldenable                  " Auto fold code
-    set list
-    set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 " }
 
@@ -915,8 +913,11 @@ set scrolljump=1                " Lines to scroll when cursor leaves screen
 let g:necoghc_enable_detailed_browse = 1
 
 let &showbreak='^'
-set list
-set listchars=tab:>·,trail:·
+set nolist
+set listchars=trail:· " 为了编辑skynet的代码方便, 暂停掉tab char的显示
+"set listchars=tab:>·,trail:·
+"set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+"set listchars=trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 let NERDTreeIgnore = ['\.pyc$', '\.hi$', '\.o$', '\.jpg$', '\.png$']
 nmap U gU
