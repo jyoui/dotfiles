@@ -52,7 +52,7 @@ __git_files () {
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # oracle java 1.8
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # 需要使用ghc的 -fllvm时启用
 #export PATH=/opt/llvm/bin:$PATH
