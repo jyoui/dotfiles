@@ -58,16 +58,15 @@ export NODE_PATH="/usr/local/lib/node_modules"
 #export PATH=/opt/llvm/bin:$PATH
 
 # cocos2dx android develop
-export ANDROID_SDK_ROOT="/Users/david/software/android-sdk-macosx/"
-export NDK_ROOT="/Users/david/software/android-ndk-r9d/"
-export COCOS_CONSOLE_ROOT=/Users/david/work/cocos2d-x-3.3/tools/cocos2d-console/bin
+export ANDROID_SDK_ROOT=~/software/android-sdk-macosx/
+export NDK_ROOT=~/software/android-ndk-r9d/
+export COCOS_CONSOLE_ROOT=~/work/cocos2d-x-3.3/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export ANT_ROOT=/usr/local/bin # for cocos console
 
 export PATH=~/software/android-ndk-r9d:$PATH
 export PATH=~/software/android-sdk-macosx/tools:$PATH
 export PATH=~/software/android-sdk-macosx/platform-tools:$PATH
-
 export PATH=~/.gem/ruby/2.0.0/bin:$PATH
 
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
