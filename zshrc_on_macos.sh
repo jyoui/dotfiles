@@ -68,6 +68,7 @@ export PATH=~/software/android-ndk-r9d:$PATH
 export PATH=~/software/android-sdk-macosx/tools:$PATH
 export PATH=~/software/android-sdk-macosx/platform-tools:$PATH
 
+export PATH=~/.gem/ruby/2.0.0/bin:$PATH
 
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
