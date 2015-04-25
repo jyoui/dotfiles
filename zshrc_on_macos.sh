@@ -11,7 +11,7 @@ export LANG=en_US.UTF-8
 #alias zsh_history=perl -lne 'm#: (\d+):\d+;(.+)# && printf "%s :: %s\n",scalar localtime $1,$2' $HISTFILE
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
 
 #begin of david's custom on Mac
 
@@ -42,7 +42,6 @@ export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
 if [ -d "$GHC_DOT_APP" ]; then
     export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
-
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/david/work/cocos/quick-3.5/tools/cocos2d-console/bin
