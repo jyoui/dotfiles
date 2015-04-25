@@ -913,9 +913,18 @@ set scrolljump=1                " Lines to scroll when cursor leaves screen
 let g:necoghc_enable_detailed_browse = 1
 
 let &showbreak='^'
-set nolist
-set listchars=trail:· " 为了编辑skynet的代码方便, 暂停掉tab char的显示
+set list
+
+" 为了编辑skynet的代码方便, 暂停掉tab char的显示
+"set listchars=trail:·
+
 "set listchars=tab:>·,trail:·
+
+" empty tab display
+"set listchars=tab:\ \ ,trail:·
+
+set listchars=tab:›\ ,trail:·
+
 "set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 "set listchars=trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
