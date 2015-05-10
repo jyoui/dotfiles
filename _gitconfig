@@ -27,7 +27,7 @@
 	default = upstream
 [core]
 	pager        = less -r
-	excludesfile = /Users/david/.gitignore_global
+	excludesfile = /Users/quinn/.gitignore_global
     quotepath    = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
