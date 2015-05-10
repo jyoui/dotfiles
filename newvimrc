@@ -918,6 +918,9 @@ set list
 set listchars=tab:>·,trail:·
 
 " 对tab 友好的list 模式
+"set listchars=tab:\ \ ,trail:· " empty tab display
+
+set listchars=tab:›\ ,trail:·
 
 "set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 "set listchars=trail:•,extends:#,nbsp:. " Highlight problematic whitespace

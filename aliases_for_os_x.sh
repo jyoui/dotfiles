@@ -41,3 +41,6 @@ alias vr='vim ~/.vimrc'
 alias py=python
 alias bpy=bpython
 alias pym='python -m'
+
+
+alias ghcllvm='PATH=/usr/local/opt/llvm/bin:$PATH ghc -fllvm'
