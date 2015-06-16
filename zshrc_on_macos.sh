@@ -54,3 +54,12 @@ export PATH=$QUICK_V3_ROOT:$PATH
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT=/Users/david/work/cocos/quick-3.5/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# nineke android env
+# dirty solution for `ant release` build for proj.android
+export QUICK_COCOS2DX_ROOT=~/work/quick-cocos2d-x/quick-cocos2d-x-2.2.6
+export ANDROID_NDK_ROOT=~/bin/android-ndk-r10e
+export ANDROID_NDK=${ANDROID_NDK_ROOT}
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+export ANDROID_HOME=${ANDROID_SDK_ROOT}
+
