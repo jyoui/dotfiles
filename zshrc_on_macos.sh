@@ -63,3 +63,6 @@ export ANDROID_NDK=${ANDROID_NDK_ROOT}
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_HOME=${ANDROID_SDK_ROOT}
 
+export PATH=${ANDROID_HOME}/platform-tools:$PATH
+export PATH=${ANDROID_HOME}/tools:$PATH
+
