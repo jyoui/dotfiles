@@ -1,0 +1,40 @@
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+
+" Tabularize {
+    if isdirectory(expand("~/.vim/bundle/tabular"))
+        nmap <c-c> :Tabularize /
+        vmap <c-c> :Tabularize /
+    endif
+" }
+
+
+" 覆盖掉默认的esc行为
+inoremap <expr> <Esc>      pumvisible() ? "\<C-y>\<Esc>" : "\<Esc>"
+
+" 覆盖掉默认的easy moving
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+
+nmap <F2> :tabprevious<CR>
+nmap <F3> :tabnext<CR>
+
+
+nnoremap <F5> "=strftime("%a %H:%M %b %d")<CR>P
+inoremap <F5> <C-R>=strftime("%a %H:%M %b %d")<CR>
+
+
+set textwidth=80
+set colorcolumn=81
+set wrap
+
+
+
+
+"let &showbreak='^'
+"set list
+"set listchars=tab:>·,trail:·
+
+nmap U gU

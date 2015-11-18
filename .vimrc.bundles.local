@@ -1,0 +1,10 @@
+
+
+" 相对行号显示
+Bundle 'myusuf3/numbers.vim'
+
+" 给力的缩进插件
+if count(g:spf13_bundle_groups, 'haskell')
+    Bundle 'itchyny/vim-haskell-indent'
+endif
+
