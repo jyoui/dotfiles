@@ -27,7 +27,6 @@
     #default = simple
 [core]
     pager        = less -r
-	excludesfile = /Users/quinn/.gitignore_global
     quotepath    = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
