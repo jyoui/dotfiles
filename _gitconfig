@@ -24,10 +24,11 @@
 [credential]
 	helper = cache --timeout=36000
 [push]
-    #default = simple
+    default = matching
 [core]
     pager        = less -r
     quotepath    = false
+	excludesfile = /home/david/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -37,3 +38,5 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[gui]
+	recentrepo = /home/david/work/server
