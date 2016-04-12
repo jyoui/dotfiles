@@ -9,6 +9,7 @@ Bundle 'xolox/vim-misc'
 
 Bundle 'xolox/vim-easytags'
 
+"这个插件会与补全插件冲突，暂时禁掉
 "Bundle 'xolox/vim-lua-ftplugin'
 
 " large buffer too slow to use in vim now
