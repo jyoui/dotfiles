@@ -894,7 +894,6 @@
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 let g:haddock_browser="open"
-let g:haddock_docdir="/Users/david/Library/Haskell/doc"
 
 let g:session_autosave = 'no'
 
@@ -943,10 +942,10 @@ map <C-H> <C-W>h
 map <C-L> <C-W>l
 
 set smarttab
-set tabstop=4
+set tabstop=2
 set expandtab " 扩展tab with合适数量的空格
-set softtabstop=4 " 处理空格的时候就像是在处理tab一样,必开的选项
-set shiftwidth=4 " 自动缩进时缩进的空格数量; with cindent, >> <<, etc.
+set softtabstop=2 " 处理空格的时候就像是在处理tab一样,必开的选项
+set shiftwidth=2 " 自动缩进时缩进的空格数量; with cindent, >> <<, etc.
 set shiftround
 set wrap
 

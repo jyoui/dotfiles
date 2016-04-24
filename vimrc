@@ -435,10 +435,9 @@ set scrolloff=5
 
 
 let g:haddock_browser="open"
-let g:haddock_docdir="/Users/david/Library/Haskell/doc"
 
 
 " spf13中好用的quickfix窗口的调出
-if !executable("ghcmod")
+if !executable("ghc-mod")
     autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 endif
