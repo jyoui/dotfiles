@@ -5,6 +5,19 @@ Bundle 'myusuf3/numbers.vim'
 
 Bundle 'rdnetto/YCM-Generator'
 
+Bundle 'xolox/vim-misc'
+
+Bundle 'xolox/vim-easytags'
+
+"这个插件会与补全插件冲突，暂时禁掉
+"Bundle 'xolox/vim-lua-ftplugin'
+
+" large buffer too slow to use in vim now
+"let g:lua_inspect_warnings = 0
+"Bundle 'xolox/vim-lua-inspect'
+
+Bundle 'leafo/moonscript-vim'
+
 " 给力的缩进插件
 if count(g:spf13_bundle_groups, 'haskell')
     Bundle 'itchyny/vim-haskell-indent'

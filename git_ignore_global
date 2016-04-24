@@ -1,0 +1,12 @@
+*.o
+*.a
+*.so
+
+*.pp.lua
+
+.svn
+
+a.out
+
+.DS_Store
+
