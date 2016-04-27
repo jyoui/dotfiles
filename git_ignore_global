@@ -10,4 +10,4 @@ a.out
 luac.out
 
 .DS_Store
-
+*.dSYM

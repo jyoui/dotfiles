@@ -20,7 +20,7 @@ set -o vi
 # ghci 等程序会用到的环境变量
 export EDITOR=vim
 export PATH=~/bin:$PATH
-export PATH=~/Library/Haskell/bin:$PATH
+export PATH=~/.cabal/bin:$PATH
 export PATH=/usr/local/openresty/nginx/sbin:$PATH
 
 __git_files () {
@@ -37,32 +37,5 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export PATH=~/.gem/ruby/2.0.0/bin:$PATH
 export PATH=~/.neovim/bin:$PATH
 
-# Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
-export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
-if [ -d "$GHC_DOT_APP" ]; then
-    export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-fi
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/david/work/cocos/quick-3.5/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable QUICK_V3_ROOT for cocos2d-x
-export QUICK_V3_ROOT=/Users/david/work/cocos/quick-3.5
-export PATH=$QUICK_V3_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/david/work/cocos/quick-3.5/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
-
-# nineke android env
-# dirty solution for `ant release` build for proj.android
-export QUICK_COCOS2DX_ROOT=~/work/quick-cocos2d-x/quick-cocos2d-x-2.2.6
-export ANDROID_NDK_ROOT=~/bin/android-ndk-r10e
-export ANDROID_NDK=${ANDROID_NDK_ROOT}
-export ANDROID_SDK_ROOT=~/Library/Android/sdk
-export ANDROID_HOME=${ANDROID_SDK_ROOT}
-
-export PATH=${ANDROID_HOME}/platform-tools:$PATH
-export PATH=${ANDROID_HOME}/tools:$PATH
-
+export PATH=~/openresty/bin:~/openresty/nginx/sbin:$PATH
+export PATH=~/Library/Python/2.7/bin:$PATH

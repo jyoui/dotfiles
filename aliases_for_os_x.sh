@@ -21,7 +21,6 @@ alias g='git'
 alias ga='git add'
 alias gs='git status'
 alias so='source'
-alias du='du -h'
 
 alias pd='pushd'
 alias ppd='popd'
@@ -44,3 +43,5 @@ alias pym='python -m'
 
 
 alias ghcllvm='PATH=/usr/local/opt/llvm/bin:$PATH ghc -fllvm'
+
+alias ccat='pygmentize -g'
