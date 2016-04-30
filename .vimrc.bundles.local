@@ -23,3 +23,8 @@ if count(g:spf13_bundle_groups, 'haskell')
     Bundle 'itchyny/vim-haskell-indent'
 endif
 
+
+"Bundle 'Shougo/vimshell.vim'
+
+"Bundle 'justinmk/vim-sneak'
+

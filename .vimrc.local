@@ -30,13 +30,12 @@ set textwidth=80
 set colorcolumn=81
 set wrap
 
-
-set smarttab
-set expandtab " 扩展tab with合适数量的空格
-set shiftround
 set tabstop=2
 set softtabstop=2 " 处理空格的时候就像是在处理tab一样,必开的选项
 set shiftwidth=2 " 自动缩进时缩进的空格数量; with cindent, >> <<, etc.
+set smarttab
+set expandtab " 扩展tab with合适数量的空格
+set shiftround
 
 
 "let &showbreak='^'
