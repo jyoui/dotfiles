@@ -61,15 +61,26 @@
   [
     :pigments ;; colors
 
+    :elastic-tabstops
+
     :language-lua ;; TODO create a lua layer
     :linter-luacheck
+
+    :language-haskell
+    :ide-haskell
+    :ide-haskell-cabal
+    :ide-haskell-hasktags
+    :ide-haskell-repl
+    :haskell-ghc-mod
+    :autocomplete-haskell
   ]
 
   ;; Packages that you want to disable.
   ;; Note that packages will be removed except bundled packages.
   ;; Bundled packages will be disabled instead.
   ;; Use this configuration instead of atom's `core.disabledPackages`
-  :disabled-packages [
+  :disabled-packages
+  [
     ;; :autoupdate-packages
     ;; :about
     ;; :welcome
@@ -82,9 +93,9 @@
   :configuration
   [
     ;; appearance
-    ["editor.fontFamily" "Source Code Pro" ]
+    ["editor.fontFamily" ["Source Code Pro" "Menlo" "Consolas" "DejaVu Sans Mono" "monospace"]]
     ["editor.fontSize" "21" ]
-    ["editor.lineHeight" "1.2" ]
+    ["editor.lineHeight" "1.3" ]
 
     ;; the current default theme
     ["core.themes" ["nucleus-dark-ui" "atom-dark-fusion-syntax"]]
