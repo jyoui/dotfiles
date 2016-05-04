@@ -17,6 +17,7 @@ Bundle 'xolox/vim-easytags'
 "Bundle 'xolox/vim-lua-inspect'
 
 Bundle 'leafo/moonscript-vim'
+Bundle 'takac/vim-hardtime'
 
 " 给力的缩进插件
 if count(g:spf13_bundle_groups, 'haskell')

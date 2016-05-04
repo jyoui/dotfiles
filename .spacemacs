@@ -26,15 +26,20 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
+     (colors :variables
+             colors-enable-nyan-cat-progress-bar t)
      auto-completion
+     smex
      better-defaults
      emacs-lisp
+     python
      lua
      git
      markdown
      org
      syntax-checking
      version-control
+     haskell
      ;; spell-checking
      )
    ;; List of additional packages that will be installed without being
@@ -207,7 +212,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil

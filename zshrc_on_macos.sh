@@ -39,3 +39,4 @@ export PATH=~/.neovim/bin:$PATH
 
 export PATH=~/openresty/bin:~/openresty/nginx/sbin:$PATH
 export PATH=~/Library/Python/2.7/bin:$PATH
+export PATH=~/emacs/bin:$PATH
