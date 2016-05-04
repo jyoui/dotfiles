@@ -60,7 +60,9 @@
   :additional-packages
   [
     :pigments ;; colors
+
     :language-lua ;; TODO create a lua layer
+    :linter-luacheck
   ]
 
   ;; Packages that you want to disable.
