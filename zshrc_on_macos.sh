@@ -29,7 +29,7 @@ __git_files () {
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # oracle java 1.8
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # 需要使用ghc的 -fllvm时启用
 #export PATH=/opt/llvm/bin:$PATH
@@ -39,3 +39,7 @@ export PATH=~/.neovim/bin:$PATH
 
 export PATH=~/openresty/bin:~/openresty/nginx/sbin:$PATH
 export PATH=~/Library/Python/2.7/bin:$PATH
+export PATH=~/emacs/bin:$PATH
+
+# env LUA_PATH : package.path, LUA_CPATH
+export LUAPATH=~/david/gl/lua/src
