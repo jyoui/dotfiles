@@ -9,6 +9,10 @@ Bundle 'xolox/vim-misc'
 
 Bundle 'xolox/vim-easytags'
 
+Bundle 'rking/ag.vim'
+Bundle 'Chun-Yang/vim-action-ag'
+
+
 "这个插件会与补全插件冲突，暂时禁掉
 "Bundle 'xolox/vim-lua-ftplugin'
 
