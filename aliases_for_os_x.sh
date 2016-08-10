@@ -45,3 +45,5 @@ alias pym='python -m'
 alias ghcllvm='PATH=/usr/local/opt/llvm/bin:$PATH ghc -fllvm'
 
 alias ccat='pygmentize -g'
+
+alias ldd='otool -L'
