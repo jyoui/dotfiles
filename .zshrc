@@ -2,7 +2,7 @@ export ZSH=/home/david/.oh-my-zsh
 
 ZSH_THEME="xiong-chiamiov-plus"
 
-plugins=(git geeknote)
+plugins=(git geeknote yum)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:"
 
