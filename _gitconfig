@@ -15,6 +15,7 @@
 [alias]
 	s    = status
 	a    = add
+	aa   = add .
 	c    = commit
 	cm   = commit -m
 	ch   = checkout
