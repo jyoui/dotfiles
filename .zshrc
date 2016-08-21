@@ -4,7 +4,7 @@ ZSH_THEME="xiong-chiamiov-plus"
 
 plugins=(git geeknote yum)
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -16,12 +16,17 @@ __git_files () {
 
 export PATH=~/bin:$PATH
 export PATH=~/local/bin:$PATH
+export PATH=~/bin/node-v4.5.0-linux-x64/bin:$PATH
 
 export LUAPATH=~/david/skynet/3rd/lua
 
 export EDITOR=vim
 
 set -o vi
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 alias v=vim
 alias du='du -h'
