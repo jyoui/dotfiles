@@ -16,6 +16,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
 #begin of david's custom on Mac
 
 source ~/david/myvimrc/aliases_for_os_x.sh
+
 set -o vi
 # ghci 等程序会用到的环境变量
 export EDITOR=vim

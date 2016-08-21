@@ -5,7 +5,9 @@
 alias ls='ls -wG'
 alias less='less -rf'
 
-#alias rm='rm -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 alias s=stat
 alias c=clear
