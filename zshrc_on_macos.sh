@@ -16,6 +16,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
 #begin of david's custom on Mac
 
 source ~/david/myvimrc/aliases_for_os_x.sh
+
 set -o vi
 # ghci 等程序会用到的环境变量
 export EDITOR=vim
@@ -41,5 +42,11 @@ export PATH=~/openresty/bin:~/openresty/nginx/sbin:$PATH
 export PATH=~/Library/Python/2.7/bin:$PATH
 export PATH=~/emacs/bin:$PATH
 
+export PATH=/opt/bochs/bin:$PATH
+# uncomment when needed
+#export BXSHARE="/opt/bochs/share/bochs"
+
 # env LUA_PATH : package.path, LUA_CPATH
 export LUAPATH=~/david/gl/lua/src
+
+export VIS_PATH=~/david/vis

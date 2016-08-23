@@ -5,7 +5,9 @@
 alias ls='ls -wG'
 alias less='less -rf'
 
-#alias rm='rm -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 alias s=stat
 alias c=clear
@@ -45,3 +47,5 @@ alias pym='python -m'
 alias ghcllvm='PATH=/usr/local/opt/llvm/bin:$PATH ghc -fllvm'
 
 alias ccat='pygmentize -g'
+
+alias ldd='otool -L'
