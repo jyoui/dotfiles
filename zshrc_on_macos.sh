@@ -51,3 +51,5 @@ export LUAPATH=~/david/gl/lua/src
 export LUADIR=~/david/gl/lua/src
 
 export VIS_PATH=~/david/vis
+
+export PATH=~/bin/android-ndk-r12b:$PATH
