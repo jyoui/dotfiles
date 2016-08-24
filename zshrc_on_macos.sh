@@ -48,5 +48,6 @@ export PATH=/opt/bochs/bin:$PATH
 
 # env LUA_PATH : package.path, LUA_CPATH
 export LUAPATH=~/david/gl/lua/src
+export LUADIR=~/david/gl/lua/src
 
 export VIS_PATH=~/david/vis
