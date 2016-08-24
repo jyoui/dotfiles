@@ -5,6 +5,12 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
     if isdirectory(expand("~/.vim/bundle/tabular"))
         nmap <c-c> :Tabularize /
         vmap <c-c> :Tabularize /
+        nmap <Leader>d= :Tabularize /=<CR>
+        vmap <Leader>d= :Tabularize /=<CR>
+        nmap <Leader>d, :Tabularize /,<CR>
+        vmap <Leader>d, :Tabularize /,<CR>
+        nmap <Leader>d- :Tabularize /--<CR>
+        vmap <Leader>d- :Tabularize /--<CR>
     endif
 " }
 
@@ -55,3 +61,5 @@ function! Incr()
   normal `<
 endfunction
 vnoremap <C-a> :call Incr()<CR>
+
+let g:syntastic_asm_compiler='nasm'
