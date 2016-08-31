@@ -36,6 +36,5 @@ alias gs='git status'
 
 alias ccat='pygmentize -g'
 
-alias cw='cd ~/work/server'
 alias dc='rlwrap nc localhost 5210'
-alias lu='lua53 -ltest'
+alias cw='cd ~/work/fish'

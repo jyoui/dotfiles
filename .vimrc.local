@@ -44,6 +44,7 @@ set smarttab
 set expandtab " 扩展tab with合适数量的空格
 set shiftround
 
+"set foldmethod=indent
 
 "let &showbreak='^'
 "set list
