@@ -33,6 +33,24 @@ set pastetoggle=<f4>
 nnoremap <F5> "=strftime("%a %H:%M %b %d")<CR>p
 inoremap <F5> <C-R>=strftime("%a %H:%M %b %d")<CR>
 
+function! ToggleFdm()
+  if &fdm == 'indent'
+    set fdm=marker
+  elseif &fdm == 'marker'
+    set fdm=indent
+  endif
+endfunction
+
+nnoremap <F6> :call ToggleFdm()<CR>
+inoremap <F6> <Esc>:call ToggleFdm()<CR>
+
+" to be used
+" <F7> - <F10>
+"
+"      centos         macosx
+" F11: full screen
+" F12: hide menu
+
 set textwidth=80
 set colorcolumn=81
 set wrap
