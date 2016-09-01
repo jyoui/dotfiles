@@ -44,7 +44,13 @@ set smarttab
 set expandtab " 扩展tab with合适数量的空格
 set shiftround
 
-"set foldmethod=indent
+set foldmethod=marker
+
+"noremap zo zO
+"noremap zO zo
+"noremap zc zC
+"noremap zC zc
+
 
 "let &showbreak='^'
 "set list
