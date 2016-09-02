@@ -34,3 +34,6 @@ endif
 "Bundle 'justinmk/vim-sneak'
 
 Bundle 'posva/vim-vue'
+
+Bundle 'Konfekt/FastFold'
+
