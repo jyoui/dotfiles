@@ -57,6 +57,9 @@ endfunction
 nnoremap <F6> :call ToggleFdm()<CR>
 inoremap <F6> <Esc>:call ToggleFdm()<CR>
 
+" 临时用来格式化源码
+nnoremap <F8> :ret <CR> :%su /\s\+$<CR>
+
 " to be used
 " <F7> - <F10>
 "
