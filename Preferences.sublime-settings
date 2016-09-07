@@ -1,26 +1,11 @@
-// Settings in here override those in "Default/Preferences.sublime-settings",
-// and are overridden in turn by file type specific settings.
 {
-    "font_face": "Monospace",
-    "font_size": 18,
-
-    // The number of spaces a tab is considered equal to
-    "tab_size": 2,
-    // Set to true to insert spaces when tab is pressed
-    "translate_tabs_to_spaces": true,
-
-    // Set to "none" to turn off drawing white space, "selection" to draw only the
-    // white space within the selection, and "all" to draw all white space
-    "draw_white_space": "all",
-
-
-    // Set to true to removing trailing white space on save
-    "trim_trailing_white_space_on_save": true,
-
-    "vintage_start_in_command_mode": true,
-
-    "ignored_packages": [],
-
-
-     "line_numbers": true
+	"draw_white_space": "all",
+	"font_face": "Monospace",
+	"font_size": 14,
+	"ignored_packages": [],
+	"line_numbers": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true
 }

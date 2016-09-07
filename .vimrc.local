@@ -7,22 +7,25 @@ if has('gui')
   set guifont=Monospace\ 16
 endif
 
+nnoremap ; :
+nnoremap : ;
+
 " Tabularize {
     if isdirectory(expand("~/.vim/bundle/tabular"))
-        nmap <c-c> :Tabularize /
-        vmap <c-c> :Tabularize /
+        nnoremap <c-c> :Tabularize /
+        vnoremap <c-c> :Tabularize /
 
-        nmap <Leader>d= :Tabularize /=<CR>
-        vmap <Leader>d= :Tabularize /=<CR>
+        nnoremap <Leader>d= :Tabularize /=<CR>
+        vnoremap <Leader>d= :Tabularize /=<CR>
 
-        nmap <Leader>d, :Tabularize /,<CR>
-        vmap <Leader>d, :Tabularize /,<CR>
+        nnoremap <Leader>d, :Tabularize /,<CR>
+        vnoremap <Leader>d, :Tabularize /,<CR>
 
-        nmap <Leader>d- :Tabularize /--<CR>
-        vmap <Leader>d- :Tabularize /--<CR>
+        nnoremap <Leader>d- :Tabularize /--<CR>
+        vnoremap <Leader>d- :Tabularize /--<CR>
 
-        nmap <Leader>d/ :Tabularize /\/\/<CR>
-        vmap <Leader>d/ :Tabularize /\/\/<CR>
+        nnoremap <Leader>d/ :Tabularize /\/\/<CR>
+        vnoremap <Leader>d/ :Tabularize /\/\/<CR>
 
     endif
 " }
@@ -32,13 +35,13 @@ endif
 inoremap <expr> <Esc>      pumvisible() ? "\<C-y>\<Esc>" : "\<Esc>"
 
 " 覆盖掉默认的easy moving
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-map <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
-nmap <F2> :tabprevious<CR>
-nmap <F3> :tabnext<CR>
+nnoremap <F2> :tabprevious<CR>
+nnoremap <F3> :tabnext<CR>
 
 " 已经有这个选项了，我以为还要写一个函数呢，终于忍够了输入 :set paste的日子
 set pastetoggle=<f4>
@@ -108,5 +111,4 @@ let g:syntastic_asm_compiler='nasm'
 
 
 let NERDTreeIgnore +=['.o$[[file]]', '\.png$', '\.jpg$', '\.so$[[file]]']
-
 
