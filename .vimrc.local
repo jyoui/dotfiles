@@ -7,8 +7,8 @@ if has('gui')
   set guifont=Monospace\ 16
 endif
 
+nnoremap q; q:
 nnoremap ; :
-nnoremap : ;
 
 " Tabularize {
     if isdirectory(expand("~/.vim/bundle/tabular"))
