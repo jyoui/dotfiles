@@ -71,4 +71,5 @@ function enable_env_for_cocos() {
   export PATH=$NDK_ROOT:$PATH
   export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
   export PATH=$ANT_ROOT:$PATH
+
 }
