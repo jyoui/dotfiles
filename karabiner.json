@@ -1,0 +1,25 @@
+{
+    "profiles": [
+        {
+            "name": "cherry profile",
+            "selected": true,
+            "simple_modifications": {
+                "left_option": "left_command",
+                "left_command": "left_option",
+                "right_option": "right_control",
+                "right_command": "right_option",
+                "caps_lock": "escape",
+                "escape": "caps_lock"
+            }
+        },
+        {
+            "name": "std profile",
+            "selected": false,
+            "simple_modifications": {
+                "right_command": "right_control",
+                "caps_lock": "escape",
+                "escape": "caps_lock"
+            }
+        }
+    ]
+}
