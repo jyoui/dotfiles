@@ -73,3 +73,8 @@ function enable_env_for_cocos() {
   export PATH=$ANT_ROOT:$PATH
 
 }
+
+# quick fix for tmux 2.2 bug on macOS 12
+function tmux() {
+  EVENT_NOKQUEUE=1 /usr/local/bin/tmux
+}
