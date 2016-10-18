@@ -23,6 +23,7 @@ alias g='git'
 alias ga='git add'
 alias gs='git status'
 alias so='source'
+alias du='du -h'
 
 alias pd='pushd'
 alias ppd='popd'

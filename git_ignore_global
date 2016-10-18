@@ -17,3 +17,5 @@ luac.out
 
 *.pb.h
 *.pb.cc
+
+xcuserdata
