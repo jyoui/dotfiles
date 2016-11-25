@@ -17,8 +17,10 @@ __git_files () {
 }
 
 #disable brew right now
-#export PATH=~/.linuxbrew/sbin:$PATH
-#export PATH=~/.linuxbrew/bin:$PATH
+enable_brew(){
+export PATH=~/.linuxbrew/sbin:$PATH
+export PATH=~/.linuxbrew/bin:$PATH
+}
 
 export PATH=~/bin:$PATH
 export PATH=~/local/bin:$PATH
@@ -40,6 +42,11 @@ alias mk='make'
 alias gs='git status'
 
 alias ccat='pygmentize -g'
+alias open='xdg-open'
 
 alias dc='rlwrap nc localhost 5210'
-alias cw='cd ~/work/fish/fs-server/fish-src/web'
+alias cw='cd ~/work/fish/fish-server/fish-src'
+
+find_rm () {
+  find $1 -name $2 | tee /dev/tty | xargs rm -f
+}
