@@ -45,8 +45,4 @@ alias ccat='pygmentize -g'
 alias open='xdg-open'
 
 alias dc='rlwrap nc localhost 5210'
-alias cw='cd ~/work/fish/fish-server/fish-src'
-
-find_rm () {
-  find $1 -name $2 | tee /dev/tty | xargs rm -f
-}
+alias cw='cd ~/work/ddz/ddz'

@@ -45,9 +45,10 @@ nnoremap <F3> :tabnext<CR>
 
 " 已经有这个选项了，我以为还要写一个函数呢，终于忍够了输入 :set paste的日子
 set pastetoggle=<f4>
-
-nnoremap <F5> "=strftime("%a %H:%M %b %d %Y")<CR>p
-inoremap <F5> <C-R>=strftime("%a %H:%M %b %d %Y")<CR>
+"nnoremap <F5> "=strftime("%a %H:%M %b %d %Y")<CR>p
+"inoremap <F5> <C-R>=strftime("%a %H:%M %b %d %Y")<CR>
+nnoremap <F5> "=strftime("%Y-%m-%d %H:%M %a")<CR>p
+inoremap <F5> <C-R>=strftime("%Y-%m-%d %H:%M %a")<CR>
 
 function! ToggleFdm()
   if &fdm == 'indent'
