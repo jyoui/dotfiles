@@ -47,8 +47,8 @@ nnoremap <F3> :tabnext<CR>
 set pastetoggle=<f4>
 "nnoremap <F5> "=strftime("%a %H:%M %b %d %Y")<CR>p
 "inoremap <F5> <C-R>=strftime("%a %H:%M %b %d %Y")<CR>
-nnoremap <F5> "=strftime("%Y-%m-%d %H:%M %a")<CR>p
-inoremap <F5> <C-R>=strftime("%Y-%m-%d %H:%M %a")<CR>
+nnoremap <F5> "=strftime("%Y-%m-%d %a %H:%M")<CR>p
+inoremap <F5> <C-R>=strftime("%Y-%m-%d %a %H:%M")<CR>
 
 function! ToggleFdm()
   if &fdm == 'indent'
