@@ -18,6 +18,8 @@
 	c    = commit
 	cm   = commit -m
 	ch   = checkout
+	df   = diff
+	dfc   = diff --cached
 	br   = branch -v
 	last = log -l HEAD
 	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
