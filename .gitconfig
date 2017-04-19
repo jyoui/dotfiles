@@ -1,0 +1,42 @@
+[giggle]
+    main-window-maximized       = false
+    main-window-geometry        = 1261x876+273+66
+    history-view-vpane-position = 325
+    main-window-view            = HistoryView
+    file-view-vpane-position    = 836
+[user]
+    name       = David Feng
+    email      = davidxifeng@gmail.com
+    signingkey = EC634FD9
+[color]
+    diff   = auto
+    status = auto
+    branch = auto
+[alias]
+    s    = status
+    a    = add
+    aa   = add .
+    c    = commit
+    cm   = commit -m
+    ch   = checkout
+    br   = branch -v
+    last = log -l HEAD
+    lg   = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    df   = diff
+    dfc  = diff --cached
+
+[credential]
+    helper = cache --timeout=36000
+[push]
+    default = tracking
+[core]
+    pager        = less -r
+    quotepath    = false
+    excludesfile = ~/.git_ignore_global
+
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
