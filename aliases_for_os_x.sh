@@ -15,6 +15,7 @@ alias u='cd ..'
 alias e='exit'
 alias la='ls -a'
 alias v='vim'
+alias nv='nvim'
 alias vv='view'
 alias vi='vim'
 alias mk='make'
@@ -32,12 +33,12 @@ alias sudoedit='sudo -e'
 
 # 常用的目录
 alias ct='cd /tmp'
-alias cdl='cd ~/david/log'
-
+alias cl='cd ~/david/log'
+alias cn='cd ~/david/notes'
 alias cw='cd ~/work'
 
 # 常修改编辑的文件
-alias va='vim ~/david/myvimrc/aliases_for_os_x.sh'
+alias va='vim ~/david/dotfiles/aliases_for_os_x.sh'
 alias vr='vim ~/.vimrc'
 
 alias py=python

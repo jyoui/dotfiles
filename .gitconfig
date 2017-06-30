@@ -5,8 +5,8 @@
     main-window-view            = HistoryView
     file-view-vpane-position    = 836
 [user]
-    name       = David Feng
-    email      = davidxifeng@gmail.com
+	name = David Feng
+	email = davidxifeng@gmail.com
     signingkey = EC634FD9
 [color]
     diff   = auto
@@ -23,7 +23,7 @@
     last = log -l HEAD
     lg   = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     df   = diff
-    dfc  = diff --cached
+    dfc  = diff --cached --ignore-all-space
     remote = remote -v
     rmt = remote -v
 
@@ -34,7 +34,7 @@
 [core]
     pager        = less -r
     quotepath    = false
-	excludesfile = ~/.git_ignore_global
+	excludesfile = /Users/wjwl/.git_ignore_global
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
@@ -50,3 +50,5 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+[commit]
+	template = /Users/wjwl/.stCommitMsg
