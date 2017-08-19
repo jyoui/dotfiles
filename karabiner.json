@@ -28,7 +28,7 @@
                 "f9": "vk_consumer_next"
             },
             "name": "cherry profile",
-            "selected": true,
+            "selected": false,
             "simple_modifications": {
                 "application": "fn",
                 "caps_lock": "escape",
@@ -63,7 +63,7 @@
                         "product_id": 610,
                         "vendor_id": 1452
                     },
-                    "ignore": true
+                    "ignore": false
                 }
             ],
             "fn_function_keys": {
@@ -81,7 +81,7 @@
                 "f9": "vk_consumer_next"
             },
             "name": "std profile",
-            "selected": false,
+            "selected": true,
             "simple_modifications": {
                 "caps_lock": "escape",
                 "escape": "caps_lock",

@@ -34,7 +34,7 @@
 [core]
     pager        = less -r
     quotepath    = false
-	excludesfile = /Users/wjwl/.git_ignore_global
+	excludesfile = ~/.git_ignore_global
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
