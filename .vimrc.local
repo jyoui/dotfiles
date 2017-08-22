@@ -111,6 +111,10 @@ set shiftround
 set nolist
 
 nmap U gU
+nmap W :w<cr>
+nmap S :w<cr>
+nmap Q :q<cr>
+nmap X :x<cr>
 
 function! Incr()
   let a = line('.') - line("'<")
