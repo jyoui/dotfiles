@@ -82,8 +82,15 @@ set textwidth=80
 set colorcolumn=81
 set wrap
 
+" 使用tab
+set noexpandtab
 
-let use_4_space = 0
+" 使用空格
+"set expandtab " 扩展tab with合适数量的空格
+
+set smarttab
+set shiftround
+let use_4_space = 1
 if use_4_space
   set tabstop=4
   set softtabstop=4
@@ -93,10 +100,6 @@ else
   set softtabstop=2 " 处理空格的时候就像是在处理tab一样,必开的选项
   set shiftwidth=2 " 自动缩进时缩进的空格数量; with cindent, >> <<, etc.
 endif
-
-set smarttab
-set expandtab " 扩展tab with合适数量的空格
-set shiftround
 
 "set foldmethod=marker
 "noremap zo zO
@@ -115,6 +118,12 @@ nmap W :w<cr>
 nmap S :w<cr>
 nmap Q :q<cr>
 nmap X :x<cr>
+
+" 再也不用每次很麻烦地保存了...
+noremap W :w<cr>
+noremap S :w<cr>
+noremap Q :q<cr>
+noremap X :x<cr>
 
 function! Incr()
   let a = line('.') - line("'<")
