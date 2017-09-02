@@ -40,3 +40,8 @@ Bundle 'Konfekt/FastFold'
 " vundle已经有新接口了,过段时间熟悉下新功能,再整理下spf13中我使用到的插件
 " 解决一下C模式下连移动都会卡顿的问题 Wed 09:20 Sep 21
 "Plugin 'jacoborus/tender'
+"
+
+Plugin 'HerringtonDarkholme/yats.vim'
+
+Plugin 'Prosumma/vim-rebol'
