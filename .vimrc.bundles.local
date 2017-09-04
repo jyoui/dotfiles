@@ -45,3 +45,5 @@ Bundle 'Konfekt/FastFold'
 Plugin 'HerringtonDarkholme/yats.vim'
 
 Plugin 'Prosumma/vim-rebol'
+
+Plugin 'rhysd/clever-f.vim'
