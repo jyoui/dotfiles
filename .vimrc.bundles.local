@@ -45,3 +45,4 @@ Bundle 'Konfekt/FastFold'
 Plugin 'HerringtonDarkholme/yats.vim'
 
 Plugin 'DavidFeng/vim-red'
+Plugin 'rhysd/clever-f.vim'
