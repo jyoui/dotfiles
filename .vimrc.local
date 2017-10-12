@@ -1,5 +1,9 @@
 set cm=blowfish2
 
+" 可以使用 % 来移动的匹配对 (:) [:] {:} `:`, 可惜不支持 "" '' ``,只能不一样的才可以
+set matchpairs+=<:>             " Match, to be used with %
+set matchpairs+=“:”,‘:’,「:」
+
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
@@ -64,9 +68,8 @@ function! ToggleFdm()
     set fdm=indent
   endif
 endfunction
-
-nnoremap <F6> :call ToggleFdm()<CR>
-inoremap <F6> <Esc>:call ToggleFdm()<CR>
+"nnoremap <F6> :call ToggleFdm()<CR>
+"inoremap <F6> <Esc>:call ToggleFdm()<CR>
 
 " 临时用来格式化源码
 nnoremap <F8> :ret <CR> :%su /\s\+$<CR>
@@ -144,3 +147,20 @@ let NERDTreeIgnore +=['.o$[[file]]', '\.png$', '\.jpg$', '\.so$[[file]]']
  "set termguicolors
 "endif
 "colorscheme tender
+
+
+function! TabMessage(cmd)
+  redir => message
+  silent execute a:cmd
+  redir END
+  if empty(message)
+    echoerr "no output"
+  else
+    " use "new" instead of "tabnew" below if you prefer split windows instead of tabs
+    tabnew
+    setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
+    silent put=message
+  endif
+endfunction
+command! -nargs=+ -complete=command TabMessage call TabMessage(<q-args>)
+" 可以把vim ex命令输出到一个tab窗口中

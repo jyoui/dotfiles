@@ -44,4 +44,4 @@ Bundle 'Konfekt/FastFold'
 
 Plugin 'HerringtonDarkholme/yats.vim'
 
-Plugin 'Prosumma/vim-rebol'
+Plugin 'DavidFeng/vim-red'
