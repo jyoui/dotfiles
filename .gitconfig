@@ -5,9 +5,8 @@
     main-window-view            = HistoryView
     file-view-vpane-position    = 836
 [user]
-	name = David Feng
-	email = davidxifeng@gmail.com
-    signingkey = EC634FD9
+	name = 聶威(JyouI)
+	email = jyoui2018@gmail.com
 [color]
     diff   = auto
     status = auto
@@ -36,9 +35,6 @@
     quotepath    = false
 	excludesfile = ~/.git_ignore_global
 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [filter "media"]
     clean = git-media-clean %f
     smudge = git-media-smudge %f
@@ -50,5 +46,3 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-[commit]
-	template = /Users/wjwl/.stCommitMsg
