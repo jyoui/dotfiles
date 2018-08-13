@@ -5,7 +5,9 @@ set matchpairs+=<:>             " Match, to be used with %
 set matchpairs+=“:”,‘:’,「:」
 
 set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+" add shift-jis to fit the situation in Tokyo
+" see more with `:help 'fileencodings'`
+set fileencodings=ucs-bom,utf-8,shift-jis,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 set nospell
 
