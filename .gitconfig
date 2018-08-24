@@ -33,7 +33,7 @@
 [core]
     pager        = less -r
     quotepath    = false
-	excludesfile = ~/.git_ignore_global
+	excludesfile = /Users/nie/.git_ignore_global
 
 [filter "media"]
     clean = git-media-clean %f
@@ -46,3 +46,6 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/nie/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
