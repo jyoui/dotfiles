@@ -284,6 +284,14 @@
                             "to": {
                                 "key_code": "left_option"
                             }
+                        },
+                        {
+                            "from": {
+                                "key_code": "international3"
+                            },
+                            "to": {
+                                "key_code": "delete_or_backspace"
+                            }
                         }
                     ]
                 }
